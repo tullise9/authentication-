@@ -63,13 +63,14 @@ Error response 422
 ```
 
 Success response 200
+```
 {
   "user_id": 1,
   "username": "alice",
   "token": "5qd3j9igebs",
   "expires_at": "2025-08-04T19:27:39.770Z"
 }
-
+```
 ### **/Login Responses**
 Error response 401
 ```
@@ -95,5 +96,25 @@ Success response 200
   "expires_at": "2025-08-04T19:30:26.905Z"
 }
 ```
+
+### **/Validate Responses**
+Error response 401
+```
+{
+  error: "invalid or expired token",
+  error_code: "invalid_session"
+}
+```
+Success response 200
+```
+{
+  "user_id": 1,
+  "username": "alice",
+  "token": "bdtkpv2ac8h",
+  "expires_at": "2025-08-04T19:30:26.905Z"
+}
+```
+
+
 
 

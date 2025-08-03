@@ -9,33 +9,36 @@ The microservice is a REST API that should be run locally. It is configured to r
 Registers a new user and returns an authentication token 
 
 ### **Example Request**
-```const response = await fetch("http://localhost:3000/register", {
+```js
+const response = await fetch("http://localhost:3000/register", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ username: "bob", password: "bob123" })
-});```
+});
 
 
 ### **POST /Login**
 If valid credentials are given and user exists, session info is returned 
 
 ### **Example Request**
-```const response = await fetch("http://localhost:3000/login", {
+```js
+const response = await fetch("http://localhost:3000/login", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ username: "bob", password: "bob123" })
-});```
+});
 
 
 ### **POST /validate**
 Returns session infor when valid session exists 
 
 ### **Example Request**
-```const response = await fetch("http://localhost:3000/validate", {
+```js
+const response = await fetch("http://localhost:3000/validate", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ token: "abcd1234" })
-});```
+});
 
 ## 2) How to receive data
 

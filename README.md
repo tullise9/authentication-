@@ -43,6 +43,57 @@ const response = await fetch("http://localhost:3000/validate", {
 ```
 
 ## 2) How to receive data
+All in JSON format 
 
+### **/REGISTER responses 
+Error reponse 409
+```
+{
+  error_code: "account_exists",
+  error: "an account with this username already exists"
+}
+```
+
+Error response 422
+```
+{
+  error_code: "weak_password",
+  error: "password must be at least 8 characters"
+}
+```
+
+Success response 200
+{
+  "user_id": 1,
+  "username": "alice",
+  "token": "5qd3j9igebs",
+  "expires_at": "2025-08-04T19:27:39.770Z"
+}
+
+### **/Login Responses**
+Error response 401
+```
+{
+  error_code: "invalid_credentials",
+  error: "username or password is incorrect"
+}
+```
+
+Error response 401
+```
+{
+  error_code: "invalid_credentials",
+  error: "username or password is incorrect"
+}
+```
+Success response 200
+```
+{
+  "user_id": 1,
+  "username": "alice",
+  "token": "bdtkpv2ac8h",
+  "expires_at": "2025-08-04T19:30:26.905Z"
+}
+```
 
 

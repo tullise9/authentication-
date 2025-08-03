@@ -15,7 +15,7 @@ const response = await fetch("http://localhost:3000/register", {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ username: "bob", password: "bob123" })
 });
-
+```
 
 ### **POST /Login**
 If valid credentials are given and user exists, session info is returned 
@@ -27,6 +27,7 @@ const response = await fetch("http://localhost:3000/login", {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ username: "bob", password: "bob123" })
 });
+```
 
 
 ### **POST /validate**
@@ -39,6 +40,7 @@ const response = await fetch("http://localhost:3000/validate", {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ token: "abcd1234" })
 });
+```
 
 ## 2) How to receive data
 
